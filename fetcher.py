@@ -72,6 +72,7 @@ def tweet2csv(tweet):
 	# very basic escaping
 	tweet[-1] = tweet[-1].replace('\\', '\\\\')
 	tweet[-1] = tweet[-1].replace('|',  '\\|')
+	tweet[-1] = tweet[-1].replace('\n', '<br>')
 	
 	return '|'.join(tweet)
 	
